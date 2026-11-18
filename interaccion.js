@@ -1,0 +1,1 @@
+"use strict";document.querySelectorAll('.exercise').forEach(form=>{form.addEventListener('submit',event=>{event.preventDefault();const chosen=form.querySelector('input:checked');const out=form.querySelector('.feedback');if(!chosen){out.textContent='Selecciona una respuesta.';return;}out.textContent=chosen.value===form.dataset.answer?out.dataset.good:out.dataset.bad;});});
